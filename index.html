@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="container">
+        <dialog id="createTask">
+            <div class="create-task">
+                <div class="create-task-tittle">
+                    <div class="close-area">
+                        <button data-button="close"><i class="fa-solid fa-xmark icon-close"></i></button>
+                        <h1 class="tittle">Cadastrar nova tarefa</h1>
+                    </div>
+                    <p class="descripton-task">Inclua um nome e o tempo médio para a conclusão da tarefa. De acordo com
+                        a
+                        definição de tempo, nosso
+                        sistema inteligênte verificará se a tarefa pode ser dividida em outras tarefas menores.</p>
+                </div>
+                <div class="info-area">
+                    <label for="taskName" class="tittle">Título</label>
+                    <div class="tittle-task">
+                        <input type="text" id="taskName" placeholder="Ex: Programar" autocomplete="off">
+                    </div>
+                    <label for="taskName" class="tittle">Descrição</label>
+                    <textarea id="descriptionTask" placeholder="Ex: Comer uma goiaba" autocomplete="off"></textarea>
+                </div>
+                <div class="task-time">
+                    <label for="timeTask" class="tittle">Tempo médio</label>
+                    <input type="range" min="0" max="2" value="0" id="timeTask" class="time-task" />
+                    <div class="time-zone">
+                        <div class="value-time-task" data-ref="0">10m</div>
+                        <div class="value-time-task" data-ref="1">30m</div>
+                        <div class="value-time-task" data-ref="2">1h</div>
+                    </div>
+                </div>
+                <div>
+                    <button id="btnSave" class="btn">Salvar</button>
+                </div>
+            </div>
+        </dialog>
+        <div class="tasks">
+            <div class="tittle-area">
+                <div class="task-icon-area">
+                    <i class="fa-solid fa-check icon-task-section"></i>
+                </div>
+                <div>
+                    <h1 class="tittle-task-section">Tarefas</h1>
+                    <p class="descripton-task">As tarefas do seu dia, em uma única aplicação</p>
+                </div>
+            </div>
+            <div>
+                <div class="list-task">
+                    <div class="search-area">
+                        <i class="fa-solid fa-magnifying-glass icon-search"></i>
+                        <input id="searchTask" type="text" placeholder="Ex: Programar">
+                    </div>
+                    <div class="tasks-area" id="tasksArea"></div>
+                    <button data-button="open" class="btn">Tarefa</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/script.js"></script>
+</body>
+
+</html>

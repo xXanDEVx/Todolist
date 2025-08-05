@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Luckiest+Guy&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    background-color: #1D1F25;
+    font-family: "Montserrat", sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.tasks {
+    width: 500px;
+    height: 500px;
+    background-color: #1D1F25;
+    filter: drop-shadow(0 0 0.75rem #000000);
+}
+
+.search-area {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.25em;
+    outline: none;
+}
+
+.tasks-area {
+    min-height: 250px;
+    max-height: 250px;
+    overflow: auto;
+    padding: 1em;
+}
+
+.list-task {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    gap: 0.5em;
+}
+
+#searchTask {
+    width: 100%;
+    height: 40px;
+    outline: unset;
+    border-radius: 0.5em;
+    border: solid 1px #7F9917;
+    background-color: #1D1F25;
+    color: #FFFFFF;
+    padding: 1em;
+}
+
+.icon-search {
+    position: absolute;
+    color: #7F9917;
+    pointer-events: none;
+    align-self: center;
+    padding: 1em;
+}
+
+.information-task-area {
+    padding: 1em;
+}
+
+.name-task {
+    color: #7F9917;
+    font-size: 14px;
+}
+
+.btn {
+    background-color: #7F9917;
+    width: 95px;
+    height: 40px;
+    border: none;
+    border-radius: 2em;
+    color: #FFFFFF;
+}
+
+.btn:hover {
+    background-color: #718815;
+    cursor: pointer;
+}
+
+.tittle-area {
+    display: flex;
+    position: relative;
+    background-color: #7F9917;
+    padding: 1em;
+}
+
+.icon-task-section {
+    color: #FFFFFF;
+    font-size: 2em;
+    padding: 0.25em;
+}
+
+.tittle-task-section {
+    color: #FFFFFF;
+}
+
+
+#createTask {
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+    background-color: #1D1F25;
+    border: none;
+    padding: 1.25em;
+    gap: 1.25em;
+}
+
+.create-task {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin: 1em;
+}
+
+[data-button="close"] {
+    width: 32px;
+    height: 32px;
+    background-color: #cb4444b2;
+    border: none;
+    border-radius: 10em;
+    cursor: pointer;
+}
+
+[data-button="close"]:hover {
+    background-color: #cb4444c9;
+}
+
+.icon-close {
+    pointer-events: none;
+    font-size: 1.25em;
+    align-self: center;
+}
+
+.tittle-task {
+    width: 100%;
+}
+
+#taskName {
+    width: 100%;
+    height: 40px;
+    color: #FFFFFF;
+    background-color: #1D1F25;
+    border: solid 1px #C2E43B;
+    border-radius: 0.5em;
+    padding: 1em;
+    outline: unset;
+}
+
+.tittle {
+    color: #C2E43B;
+}
+
+.descripton-task {
+    color: #E4E7F0;
+    font-size: 10px;
+}
+
+.info-area {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#descriptionTask {
+    resize: none;
+    outline: none;
+    width: 100%;
+    height: 150px;
+    color: #FFFFFF;
+    background-color: #1D1F25;
+    border: solid 1px #C2E43B;
+    border-radius: 0.5em;
+    padding: 0.5em;
+}
+
+.task-time {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.time-zone {
+    display: flex;
+    color: #7F9917;
+    justify-content: space-between;
+}
+
+.time-task {
+    background-color: #718815;
+    cursor: e-resize;
+    height: 3px;
+}
+
+.timer-area {
+    display: flex;
+    background-color: #7F99171A;
+    color: #7F9917;
+    font-size: 10px;
+    padding: 0.25em;
+    width: 50px;
+    border-radius: 0.75em;
+    justify-content: space-between;
+}
+
+.close-area {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+.task-icon-area {
+    display: flex;
+    padding: 0.25em;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+
+.task-area {
+    display: flex;
+    padding: 0.25em;
+    cursor: pointer;
+}
+
+.task-area::before {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 400;
+    content: "\f111";
+    font-size: 16px;
+    color: #7F9917;
+    align-self: center;
+}
+
+.task-area:has(input:checked)::before {
+    content: "\f058";
+    font-weight: 800;
+}
